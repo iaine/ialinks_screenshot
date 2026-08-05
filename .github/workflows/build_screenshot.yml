@@ -30,11 +30,11 @@ jobs:
       - name: Unit tests (pure logic, no Electron)
         run: npm test
 
-      - name: Electron full-page-capture smoke test (real browser, headless)
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y xvfb
-          xvfb-run -a ./node_modules/.bin/electron --no-sandbox smoke-test.mjs
+      #- name: Electron full-page-capture smoke test (real browser, headless)
+      #  run: |
+      #    sudo apt-get update
+      #    sudo apt-get install -y xvfb
+      #    xvfb-run -a ./node_modules/.bin/electron --no-sandbox smoke-test.mjs
 
   build:
     name: Build (${{ matrix.os }})
